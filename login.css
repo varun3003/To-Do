@@ -9,12 +9,63 @@ body {
     font-family: Arial, sans-serif;
     background-color: #ded11b;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column; /* Allows header and content to stack vertically */
+    min-height: 100vh; /* Ensure body takes at least the full viewport height */
 }
 
-.container {
+/* Header Styles */
+.header {
+    background-color: #424241;
+    padding: 20px 0;
+    width: 100%;
+    position: absolute; /* Stays on top of the content */
+    top: 0;
+    z-index: 1000; /* Ensures header is above other elements */
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ede8e8;
+    text-decoration: none;
+}
+
+.nav {
+    float: right;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #f0ebeb;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Login Form Container */
+.login-container {
     background-image: url('https://images.designtrends.com/wp-content/uploads/2016/03/29085131/White-Grunge-Texture.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
@@ -24,19 +75,26 @@ body {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     width: 300px;
     text-align: center; /* Center content */
+    margin: 100px auto 0 auto; /* Center horizontally and add top margin */
 }
 
-h2 {
+/* Heading */
+.login-container h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-form {
+/* Form styles */
+.login-container form {
     display: flex;
     flex-direction: column;
 }
 
-form input {
+.login-container form label {
+    margin-bottom: 5px;
+}
+
+.login-container form input {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -44,17 +102,58 @@ form input {
     font-size: 14px;
 }
 
-form input[type="submit"] {
+.login-container form input[type="submit"] {
     background-color: #150f0f;
     color: white;
     cursor: pointer;
 }
 
-form input[type="submit"]:hover {
+.login-container form input[type="submit"]:hover {
     background-color: #45a049;
 }
 
+/* Error message styles */
 .error-message {
     color: #f44336;
     margin-bottom: 15px;
+}
+
+/* Button styles */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Additional Classes */
+.login {
+    background-color: #424241;
+    text-decoration: none;
+}
+
+.reg {
+    color: #424241;
+    text-decoration: none;
 }
