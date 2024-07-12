@@ -27,6 +27,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: #ede8e8;
+    text-decoration: none;
   }
   
   .nav {
@@ -102,3 +103,12 @@ body {
     width: 100%;
   }
   
+  .login{
+    background-color: #424241;
+    text-decoration: none;
+  }
+
+  .reg{
+    color: #424241;
+    text-decoration: none;
+  }
